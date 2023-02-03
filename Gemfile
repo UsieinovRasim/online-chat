@@ -15,5 +15,6 @@ gem "redis", "~> 4.0"
 gem "devise", "~> 4.8"
 
 group :development, :test do
-  gem "debug"
+  gem "debug", ">= 1.0.0"
+  gem 'pry'
 end

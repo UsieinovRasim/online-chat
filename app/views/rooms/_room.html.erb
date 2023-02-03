@@ -1,0 +1,11 @@
+<div class="row shadow overflow-hidden border-b border-gray-200 sm:rounded-lg my-1 py-2 pl-1" >
+  <div class="flex flex-row">
+    <div class="column basis-7/12">
+      <%= link_to room.title, room_path(room), class: "text-current text-blue-500 mr-4", rel: "noopener noreferrer" %>
+    </div>
+    <div class="column">
+      <%= room&.messages&.last&.body %>
+    </div>
+  </div>
+</div>
+<br>
