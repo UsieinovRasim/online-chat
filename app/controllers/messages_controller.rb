@@ -8,6 +8,16 @@ class MessagesController < ApplicationController
     end
   end
 
+  def edit
+    @message = Message.find(params[:id])
+
+  end
+
+  def update
+    # @message = Message.find(params[:id])
+
+  end
+
   # def like
   #   @message = Message.find(params[:id])
   #   like = @message.likes.find_by(user: current_user)
