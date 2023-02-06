@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  before_action :find_message, only: [:edit, :update]
+
   def create
     @new_message = current_user.messages.build(strong_params)
 
@@ -9,12 +11,22 @@ class MessagesController < ApplicationController
   end
 
   def edit
-    @message = Message.find(params[:id])
+    # @message = Message.find(params[:id])
 
   end
 
   def update
     # @message = Message.find(params[:id])
+
+    if @message.update(strong_params)
+      flash[:success] = "Task updated!"
+      redirect_to room_path(@message.room)
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
 
   end
 
@@ -35,6 +47,10 @@ class MessagesController < ApplicationController
   # end
 
   private
+
+  def find_message
+    @message ||= Message.find(params[:id])
+  end
 
   def strong_params
     params.require(:message).permit(:body, :room_id)

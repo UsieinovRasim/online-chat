@@ -15,12 +15,18 @@
   <nav class="bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <div class="flex items-center">
-          <div class="flex-shrink-0">
-            <a href="/">
-              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
-            </a>
-          </div>
+
+        <!-- <div class="flex items-center"> -->
+        <div>
+          <a href="/">
+            <img class="h-8 w-9" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+          </a>
+        </div>
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 class="text-2xl font-bold text-white">
+            Online-chat
+          </h1>
+        </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <% if current_user.present? %>
@@ -31,7 +37,7 @@
               <% end %>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
 
@@ -47,12 +53,8 @@
     </div>
   </nav>
 
-  <!-- <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900">
-        Online-chat
-      </h1>
-    </div>
+  <!-- <header>
+
   </header> -->
   <main>
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
