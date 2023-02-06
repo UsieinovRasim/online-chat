@@ -4,6 +4,7 @@
     <div class="basis-2/12"><%= message.user.name %></div>
     <div class="basis-1/12"><%= l(message.created_at, format: :short) %></div>
     <div class="basis-1/12"></div>
+
     <!-- if current_user == message.user  -->
       <div>
         <%= link_to 'edit', edit_message_path(message) %>

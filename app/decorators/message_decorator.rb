@@ -2,7 +2,7 @@
 #   delegate_all
 #
 #   def heart(user)
-#     if object.likes.find_by(user: user).present?
+#     if object.likes.find_by(user: current_user).present?
 #       "🧡"
 #     else
 #       "🤍"
